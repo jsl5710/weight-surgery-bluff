@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+# results and run files are tracked selectively
+results/*
+!results/.gitkeep
+runs/*
+!runs/.gitkeep
+data/*
+!data/.gitkeep
+# never commit credentials or restricted material
+.env
+restricted/

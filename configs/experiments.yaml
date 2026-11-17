@@ -1,0 +1,17 @@
+# Experiment list for Paper 1. Keep IDs identical to the experiment plan and the paper.
+experiments:
+  E0:  {purpose: "Produce and sanity-check unedited models", runs: "4 models x 2 settings x 5 seeds = 40 fine-tunes", hypothesis: null, priority: must}
+  E1:  {purpose: "Obstacle diagnostic (linear probes per language, k=64)", runs: "78 languages x 40 checkpoints", hypothesis: H4, priority: must}
+  E2:  {purpose: "Baselines B2 to B6 (B7 on decoders)", runs: "about 800 cheap runs", hypothesis: H2, priority: must}
+  E3a: {purpose: "Main surgery, autonomous (L3)", runs: "160 sessions", hypothesis: [H1, H2, H3], priority: must}
+  E3b: {purpose: "Main surgery, expert applies (L1)", runs: "48 sessions", hypothesis: H5, priority: should}
+  E4:  {purpose: "Forward-pass budget B in {0,10,25}", runs: "120 sessions", hypothesis: H1, priority: must}
+  E5:  {purpose: "Data and edit size (k, epsilon)", runs: "160 sessions", hypothesis: null, priority: could}
+  E6:  {purpose: "Guard off and module visibility", runs: "120 sessions", hypothesis: H3, priority: must}
+  E7:  {purpose: "Surgeon identity (open weights)", runs: "40 sessions", hypothesis: null, priority: could}
+  E8:  {purpose: "Decoder test and 270M negative control", runs: "240 sessions", hypothesis: H4, priority: must}
+  E9:  {purpose: "Autonomy and human arms, native-speaker review", runs: "12 sessions plus review", hypothesis: H5, priority: should}
+  E10: {purpose: "Final test evaluation, one logged read per cell", runs: "n/a", hypothesis: all, priority: must}
+  E11: {purpose: "Out-of-distribution transfer (held-out languages, generators, datasets, dialects)", runs: "40 extra sessions plus evaluation", hypothesis: H6, priority: must}
+cut_order_if_over_budget: [E7, E5, "XLM-R half of E3a"]
+core: [E0, E1, E3a, E4, E6, E8, E11]

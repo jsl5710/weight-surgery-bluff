@@ -1,0 +1,19 @@
+% Shared macros. Placeholders are red so nothing slips into a submission.
+\usepackage{xcolor}
+\usepackage{booktabs,multirow,array,amsmath,amssymb,url}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{patterns,arrows.meta,positioning,shapes.geometric,fit,calc}
+
+\newcommand{\xx}{\textcolor{red}{\textbf{XX}}}            % numeric placeholder
+\newcommand{\todo}[1]{\textcolor{blue}{[TODO: #1]}}        % instruction to the runner
+\newcommand{\phfig}{\node[rotate=22,gray!70,font=\large\bfseries] at (rel axis cs:0.5,0.5) {PLACEHOLDER};}
+\newcommand{\bluff}{\textsc{BLUFF}}
+
+% Colour-blind-safe palette for placeholder plots
+\definecolor{cA}{HTML}{1B6CA8}
+\definecolor{cB}{HTML}{D55E00}
+\definecolor{cC}{HTML}{009E73}
+\definecolor{cD}{HTML}{6C6C6C}

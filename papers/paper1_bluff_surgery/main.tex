@@ -140,7 +140,7 @@ Settings used & multi., cross-ling. \\
 \label{tab:data}
 \end{table}
 
-\paragraph{Models.} mDeBERTa-v3-base and XLM-R base detectors, plus multilingual S-BERT \citep{reimers2020making} and LaBSE \citep{feng2022labse} encoders with a classification head, fine-tuned on \bluff{} under (a) the multilingual setting and (b) the cross-lingual setting (train on big-head, test on long-tail). Qwen3.5-0.8B and Gemma 3 270M serve as decoder tests and negative control. Surgeon identities: \xx{} (closed) and \xx{} (open weights).
+\paragraph{Models.} mDeBERTa-v3-base and XLM-R base detectors, plus multilingual S-BERT \citep{reimers2020making} and LaBSE \citep{feng2022labse} encoders (Hugging Face checkpoints \texttt{sentence-transformers/paraphrase-multilingual-mpnet-base-v2} and \texttt{sentence-transformers/LaBSE}) with a classification head, fine-tuned on \bluff{} under (a) the multilingual setting and (b) the cross-lingual setting (train on big-head, test on long-tail). Qwen3.5-0.8B and Gemma 3 270M serve as decoder tests and negative control. Surgeon identities: \xx{} (closed) and \xx{} (open weights).
 
 \paragraph{Baselines.} B1 unedited; B2 extra LoRA on the same $k$ examples; B3 per-language adapters; B4 task-vector merging; B5 language-neuron intervention; B6 neuron-specific LoRA; B7 rank-one and batch editing (decoder models only).
 
